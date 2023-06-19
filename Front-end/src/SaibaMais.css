@@ -1,0 +1,68 @@
+#root{
+    padding: 0;
+}
+
+.SaibaMais-Habits{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.h1-SaibaMais{
+    margin: 0;
+    padding-top: 2rem;
+}
+
+.Conteiner-Sobre{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Logo-Habits-Img{
+    width: 20rem;
+}
+
+.Descricao-Habits{
+    text-align: justify;
+    padding-right: 3rem;
+}
+
+.h2-Devs{
+    font-size: 3rem;
+}
+
+.Descricao-Geral{
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+.Devs-Descricao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Devs-Descricao1, .Devs-Descricao2{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+
+.Dev-Ana, .Dev-Daniel, .Dev-Huandy, .Dev-Leticia{
+    display: flex;
+    flex-direction: column;
+}
+
+.Devs-Nome{
+    margin: 0;
+}
+
+.Devs-Foto{
+    width: 20rem;
+    border-radius: .5rem;
+}
+
+.Devs-GitHub, .Devs-Linkedin, .Link-Unifei, .Link-Imc{
+    color: rgb(26, 34, 142);
+}
