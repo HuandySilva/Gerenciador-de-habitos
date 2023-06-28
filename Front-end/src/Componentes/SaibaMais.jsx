@@ -1,9 +1,11 @@
-import fotoAna from './assets/Foto-Ana.png'
-import fotoDaniel from './assets/Foto-Daniel.jpeg'
-import fotoHuandy from './assets/Foto-Huandy.jpg'
-import fotoLeticia from './assets/Foto-Leticia.jpeg'
-import logo from './assets/habits.png'
-import './SaibaMais.css'
+import fotoAna from '../assets/Foto-Ana.png'
+import fotoDaniel from '../assets/Foto-Daniel.jpeg'
+import fotoHuandy from '../assets/Foto-Huandy.jpg'
+import fotoLeticia from '../assets/Foto-Leticia.jpeg'
+import logo from '../assets/habits.png'
+import '../Styles/SaibaMais.css'
+
+import { Link } from 'react-router-dom';
 
 export default function SaibaMais(){
     return(
@@ -76,6 +78,7 @@ export default function SaibaMais(){
                         <a href="https://br.linkedin.com/in/leticiasantss" className='Devs-Linkedin'>Linkedin</a>
                     </div>                
                 </section>
+                <Link to='/'>Landing</Link>
             </section>
         </div>
     )
