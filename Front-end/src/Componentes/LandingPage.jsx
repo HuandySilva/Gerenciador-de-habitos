@@ -17,7 +17,7 @@ export default function LandingPage(){
                         <Link to="/register-user" className='LandingPage-link-cadastro'>Cadastrar</Link>
                     </div>
                     <figure className='LandingPage-figure'>
-                        <img src={logoHabits} alt="" className='LandingPage-img'/>
+                        <img src={logoHabits} alt="Logo do projeto Hábits" className='LandingPage-img'/>
                     </figure>
                 </div>
             </div>

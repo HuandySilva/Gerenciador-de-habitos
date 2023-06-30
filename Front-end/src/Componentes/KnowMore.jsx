@@ -17,7 +17,7 @@ export default function KnowMore(){
                     </p>
                 </div>
                 <figure className='Logo-Habits'>
-                    <img src={logo} alt="" className='Logo-Habits-Img'/>
+                    <img src={logo} alt="Logo do projeto Hábits" className='Logo-Habits-Img'/>
                 </figure>
             </section>
             <section className='Explicacao-SaibaMais'>
@@ -42,7 +42,7 @@ export default function KnowMore(){
                 <section className='Devs-Descricao'>
                     <div className='Dev-Ana'>
                         <figure>
-                            <img src={fotoAna} alt="" className='Devs-Foto'/>
+                            <img src={fotoAna} alt="Foto da desenvolvedora Ana Maísa" className='Devs-Foto'/>
                         </figure>
                         <h3 className='Devs-Nome'>Ana Maisa</h3>
                         <p className='Devs-graduacao'>Graduanda de Ciências da Computação</p>
@@ -51,7 +51,7 @@ export default function KnowMore(){
                     </div>
                     <div className='Dev-Daniel'>
                         <figure>
-                            <img src={fotoDaniel} alt="" className='Devs-Foto'/>
+                            <img src={fotoDaniel} alt="Foto do desenvolvedor Daniel" className='Devs-Foto'/>
                         </figure>
                         <h3 className='Devs-Nome'>Daniel Gonzalez</h3>
                         <p className='Devs-graduacao'>Graduando de Sistemas de Informação</p>
@@ -61,7 +61,7 @@ export default function KnowMore(){
                 
                     <div className='Dev-Huandy'>
                         <figure>
-                            <img src={fotoHuandy} alt="" className='Devs-Foto'/>
+                            <img src={fotoHuandy} alt="Foto da desenvolvedora Huandy" className='Devs-Foto'/>
                         </figure>
                         <h3 className='Devs-Nome'>Huandy Calini</h3>
                         <p className='Devs-graduacao'>Graduanda de Sistemas de Informação</p>
@@ -70,7 +70,7 @@ export default function KnowMore(){
                     </div>
                     <div className='Dev-Leticia'>
                         <figure>
-                            <img src={fotoLeticia} alt="" className='Devs-Foto'/>
+                            <img src={fotoLeticia} alt="Foto da desenvolvedora Letícia" className='Devs-Foto'/>
                         </figure>
                         <h3 className='Devs-Nome'>Letícia Santos</h3>
                         <p className='Devs-graduacao'>Graduanda de Sistemas de Informação</p>
