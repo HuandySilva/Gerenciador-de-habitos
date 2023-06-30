@@ -115,7 +115,8 @@
     align-items: center;
     width: 16rem;
     background-color: rgba(0,8,121,1);
-    border-radius: .2rem;
+    border-radius: .8rem;
+    border: none;
     box-shadow: 0 0 20px rgba(0, 8, 121, 0.467);
 }
 
@@ -130,7 +131,8 @@
 
 .Devs-Foto{
     width: 16rem;
-    border-radius: .2rem .2rem 0 0;
+    border-radius: .8rem .8rem 0 0;
+    border: none;
 }
 
 .Devs-graduacao{

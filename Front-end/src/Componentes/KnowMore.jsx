@@ -3,11 +3,11 @@ import fotoDaniel from '../assets/Foto-Daniel.jpeg'
 import fotoHuandy from '../assets/Foto-Huandy.jpg'
 import fotoLeticia from '../assets/Foto-Leticia.jpeg'
 import logo from '../assets/habits.png'
-import '../Styles/SaibaMais.css'
+import '../Styles/KnowMore.css'
 
 import { Link } from 'react-router-dom';
 
-export default function SaibaMais(){
+export default function KnowMore(){
     return(
         <div className='Container-Main'>
             <section className='Sobre-Habits'>

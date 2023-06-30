@@ -6,7 +6,8 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
 import LandingPage from './Componentes/LandingPage'
 import LoginUser from './Componentes/LoginUser'
-import SaibaMais from './Componentes/SaibaMais'
+import KnowMore from './Componentes/KnowMore'
+import RegisterUser from './Componentes/RegisterUser'
 
 const router = createBrowserRouter([
   {
@@ -18,8 +19,12 @@ const router = createBrowserRouter([
     element: <LoginUser/>
   },
   {
-    path: '/saiba-mais',
-    element: <SaibaMais/>
+    path: '/know-more',
+    element: <KnowMore/>
+  },
+  {
+    path: '/register-user',
+    element: <RegisterUser/>
   }
 ])
 

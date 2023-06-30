@@ -25,9 +25,9 @@ export default function LoginUser() {
 
     const {errors} = formState;
 
-    // const submit = async (data) => {
+    //  const submit = async (data) => {
     //     try {
-    //       const response = await axios.post('http:localhost:3000/auth/login', data);
+    //       const response = await axios.post('http:localhost:8080/auth/login', data);
     //       sessionStorage.setItem('token', response.data);
     //       setMsg('Usuário Autenticado');
     //     } catch (error) {
@@ -37,9 +37,9 @@ export default function LoginUser() {
     //  onSubmit={handleSubmit(submit)} noValidate
     // }
     
-    if(msg.includes('Usuário Autenticado')){
-      return <Navigate to='/saiba-mais'/>
-    }
+    // if(msg.includes('Usuário Autenticado')){
+    //   return <Navigate to='/know-more'/>
+    // }
 
   return (
     <div className='LoginUser-Container'>
@@ -47,14 +47,16 @@ export default function LoginUser() {
         <h2 className='LoginUser-h2'>Login</h2>
         <form  className='LoginUser-Form'>
           <div className='LoginUser-Container-Inputs'>
-            <input type="email" placeholder='e-mail' className='LoginUser-Input-Email'/>
-            <input type="password" placeholder='senha' className='LoginUser-Input-Senha'/>
+            <input type="email" placeholder='e-mail' className='LoginUser-Input-Email' {...register('email')}/>
+            <p className='LoginUser-erro'>{errors.email?.message}</p>
+            <input type="password" placeholder='senha' className='LoginUser-Input-Senha' {...register('password')}/>
+            <p className='LoginUser-erro'>{errors.password?.message}</p>
             <button className='LoginUser-Button-Login'>Entrar</button>
           </div>
         </form>
         <div className='LoginUser-div-cadastro'>
           <p className='LoginUser-p-cadastro'>Não possui conta?</p>
-          <Link to='/saiba-mais' className='LoginUser-link-cadastro'>Cadastrar</Link>
+          <Link to='/register-user' className='LoginUser-link-cadastro'>Cadastrar</Link>
         </div>
       </section>
     </div>
