@@ -1,6 +1,6 @@
 package com.unifei.gerenciadorhabitos.util;
 
-import com.unifei.gerenciadorhabitos.dtos.UserDto;
+import com.unifei.gerenciadorhabitos.dtos.UserPostDto;
 import com.unifei.gerenciadorhabitos.models.UserModel;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -11,7 +11,7 @@ public interface UserMapper {
     UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
 
     @Mapping(target = "authorities", ignore = true)
-    UserModel dtoToModel(UserDto userDto);
+    UserModel dtoToModel(UserPostDto userDto);
 
-    UserDto modelToDto(UserModel user);
+    UserPostDto modelToDto(UserModel user);
 }

@@ -10,14 +10,13 @@ import org.springframework.transaction.annotation.Transactional;
 import com.unifei.gerenciadorhabitos.models.UserModel;
 import com.unifei.gerenciadorhabitos.repositories.UserRepository;
 
+import lombok.AllArgsConstructor;
+
 @Service
 @Transactional
+@AllArgsConstructor
 public class UserDetailsServiceImpl implements UserDetailsService {
     final UserRepository userRepository;
-
-    public UserDetailsServiceImpl(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

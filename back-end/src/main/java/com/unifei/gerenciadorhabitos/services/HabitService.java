@@ -9,18 +9,20 @@ import com.unifei.gerenciadorhabitos.models.HabitModel;
 import com.unifei.gerenciadorhabitos.repositories.HabitRepository;
 import com.unifei.gerenciadorhabitos.util.HabitMapper;
 
-@Service
-public class HabitService {
-    private HabitRepository habitRepository;
+import lombok.AllArgsConstructor;
 
-    public HabitService(HabitRepository habitRepository) {
-        this.habitRepository = habitRepository;
-    }
+@Service
+@AllArgsConstructor
+public class HabitService {
+    private final HabitRepository habitRepository;
 
     public List<HabitDto> findAll() {
         return HabitMapper.INSTANCE.modelsToDtos(habitRepository.findAll());
     }
 
+    // Metodo simplificado que eu criei só pra facilitar a inserção de habitos na
+    // base de dados. Se você está olhando isso depois de já termos inserido os
+    // dados e eu esqueci de tirar o método, sinta-se livre.
     public void save(HabitModel dtoToModel) {
         habitRepository.save(dtoToModel);
     }
