@@ -1,0 +1,10 @@
+.filme div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.containerFilme img{
+    width: 20%;
+}
