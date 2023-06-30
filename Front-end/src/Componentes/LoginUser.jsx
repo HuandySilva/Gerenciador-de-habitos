@@ -5,7 +5,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup';
 import axios, * as others from 'axios';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 const schema = yup.object({
   email: yup.string().email('Email inválido').required('Email obrigatório'),
@@ -45,13 +45,13 @@ export default function LoginUser() {
     <div className='LoginUser-Container'>
       <section className='LoginUser-Container-Body'>
         <h2 className='LoginUser-h2'>Login</h2>
-        <form  className='LoginUser-Form'>
+        <form className='LoginUser-Form'>
           <div className='LoginUser-Container-Inputs'>
             <input type="email" placeholder='e-mail' className='LoginUser-Input-Email' {...register('email')}/>
             <p className='LoginUser-erro'>{errors.email?.message}</p>
             <input type="password" placeholder='senha' className='LoginUser-Input-Senha' {...register('password')}/>
             <p className='LoginUser-erro'>{errors.password?.message}</p>
-            <button className='LoginUser-Button-Login'>Entrar</button>
+            <Link to='/home' className='LoginUser-Button-Login'>Entrar</Link>
           </div>
         </form>
         <div className='LoginUser-div-cadastro'>

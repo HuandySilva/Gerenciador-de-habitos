@@ -8,6 +8,9 @@ import LandingPage from './Componentes/LandingPage'
 import LoginUser from './Componentes/LoginUser'
 import KnowMore from './Componentes/KnowMore'
 import RegisterUser from './Componentes/RegisterUser'
+import HeaderAndFooter from './Componentes/HeaderAndFooter'
+import Home from './Componentes/Home'
+import KnowMoreInner from './Componentes/KnowMoreInner'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +28,21 @@ const router = createBrowserRouter([
   {
     path: '/register-user',
     element: <RegisterUser/>
+  },
+  {
+    path: '/home',
+    element: <HeaderAndFooter/>,
+    children: [
+      {
+        path: '/home',
+        element: <Home/>
+      },
+      {
+        path: '/home/know-more',
+        element: <KnowMoreInner/>
+      }
+    ]
+
   }
 ])
 
