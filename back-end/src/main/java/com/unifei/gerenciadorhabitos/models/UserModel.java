@@ -3,6 +3,7 @@ package com.unifei.gerenciadorhabitos.models;
 import java.util.Collection;
 import java.util.HashSet;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.security.core.GrantedAuthority;
@@ -24,6 +25,7 @@ public class UserModel implements UserDetails {
     @NotBlank
     @Email
     @Field("username")
+    @Indexed(unique = true)
     private String username;
     @NotNull
     @NotBlank
