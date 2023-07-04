@@ -21,6 +21,10 @@ public class UserService {
         return userRepository.findAll();
     }
 
+    public UserModel findByUsername(String username) {
+        return userRepository.findByUsername(username);
+    }
+
     @Transactional
     public void saveUser(UserModel user) {
         String encodedPassword = passwordEncoder.encode(user.getPassword());

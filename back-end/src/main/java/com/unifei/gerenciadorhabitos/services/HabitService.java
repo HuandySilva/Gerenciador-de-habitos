@@ -1,6 +1,7 @@
 package com.unifei.gerenciadorhabitos.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -25,5 +26,9 @@ public class HabitService {
     // dados e eu esqueci de tirar o método, sinta-se livre.
     public void save(HabitModel dtoToModel) {
         habitRepository.save(dtoToModel);
+    }
+
+    public Optional<HabitModel> findByDescription(String description) {
+        return habitRepository.findByDescription(description);
     }
 }

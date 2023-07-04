@@ -14,6 +14,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Setter;
 
 @Document(collection = "users")
+
 @Setter
 public class UserModel implements UserDetails {
     @Id
