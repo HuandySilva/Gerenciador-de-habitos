@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: left;
-    background: rgb(0,4,54);
+    background: rgb(0, 4, 54);
     background: linear-gradient(90deg,rgba(0,4,54,1)  0%, rgba(0,8,121,1) 50%, rgba(0,207,255,1) 100%);
 }
 

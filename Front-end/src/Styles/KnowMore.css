@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap&family=Cookie&display=swap');
 
 .Container-Main{
     height: 100%;
@@ -32,6 +32,13 @@
     text-align: left;
 }
 
+.h1-span-SaibaMais{
+    font-family: 'Cookie', cursive;
+    font-weight: 100;
+    font-size: 3rem;
+    color: white;
+}
+
 .Logo-Habits-Img{
     width: 20rem;
 }
@@ -56,6 +63,9 @@
 }
 
 .Porque-Usar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-right: 3rem;
     border-right: .1rem solid rgba(0,8,121,1); 
 }

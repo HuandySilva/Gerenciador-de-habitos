@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useEffect,useState } from 'react';
+import './StylesApi/Clima.css'
 
 const Clima = () =>{
 
@@ -43,14 +44,29 @@ const Clima = () =>{
     },[])
 
     return(
-      <div className='clima'>
+      <div className='Clima-Container'>
         {dataClima ? (
-          <div>
-            <h2>Clima Atual</h2>
-            <p>Temperatura Atual: {Math.round(dataClima.main.temp - 273)}°C</p>
-            <p>Clima Atual: {dataClima.weather[0].description} <img src={`https://openweathermap.org/img/w/${dataClima.weather[0].icon}.png`} alt="" /></p>
-            <p>Temparatura de aqui a 3 horas: {Math.round(dataClimaForecast.list[0].main.temp_min - 273)}°C</p>
-            <p>Clima de aqui a 3 horas: {dataClimaForecast.list[0].weather[0].description} <img src={`https://openweathermap.org/img/w/${dataClimaForecast.list[0].weather[0].icon}.png`} alt="" /></p>
+          <div className='Clima'>
+            <div className='Clima-atual'>
+              <figure>
+                <img src={`https://openweathermap.org/img/w/${dataClima.weather[0].icon}.png`} alt="" />
+                {Math.round(dataClima.main.temp - 273)}°C
+              </figure>
+              <div className='Info'>
+                <p>Temperatura Atual</p>
+                <p> {dataClima.weather[0].description} </p>
+              </div>
+            </div>
+            
+            <div className='Clima-em3horas'>
+              <p>Em 3 horas:</p>
+              <figure>
+                <img src={`https://openweathermap.org/img/w/${dataClimaForecast.list[0].weather[0].icon}.png`} alt="" />
+                {Math.round(dataClimaForecast.list[0].main.temp_min - 273)}°C
+              </figure>
+              <p>{dataClimaForecast.list[0].weather[0].description}</p>
+              
+            </div>
           </div>
         ):(
           <p>Obtendo dados do clima...</p>

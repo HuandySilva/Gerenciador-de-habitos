@@ -12,7 +12,7 @@ export default function KnowMore(){
         <div className='Container-Main'>
             <section className='Sobre-Habits'>
                 <div className='Conteiner-Sobre'>
-                    <h1 className='h1-SaibaMais'>Sobre o Habits</h1>
+                    <h1 className='h1-SaibaMais'>Sobre o <span className='h1-span-SaibaMais'>Habits</span></h1>
                     <p className='Descricao-Habits'>O Gerenciador de hábitor foi selecionado para ser desenvolvido pelo grupo porque Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium in animi recusandae incidunt dolorem quidem hic, praesentium ipsam fugit qui quibusdam, maxime facilis autem eveniet et nesciunt tenetur officia. Error. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, molestias? Cumque, voluptas natus! Illum labore nostrum unde fuga dicta perferendis ea aspernatur ipsa et, esse eius maxime porro aut totam.
                     </p>
                 </div>
@@ -78,7 +78,6 @@ export default function KnowMore(){
                         <a href="https://br.linkedin.com/in/leticiasantss" className='Devs-Linkedin'>Linkedin</a>
                     </div>                
                 </section>
-                <Link to='/'>Landing</Link>
             </section>
         </div>
     )
