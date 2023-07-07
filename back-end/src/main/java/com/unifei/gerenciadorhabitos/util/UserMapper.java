@@ -1,6 +1,5 @@
 package com.unifei.gerenciadorhabitos.util;
 
-import com.unifei.gerenciadorhabitos.dtos.UserGetDto;
 import com.unifei.gerenciadorhabitos.dtos.UserPostDto;
 import com.unifei.gerenciadorhabitos.models.UserModel;
 
