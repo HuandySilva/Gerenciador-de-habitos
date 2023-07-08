@@ -23,8 +23,8 @@ public class HabitController {
     final HabitService habitService;
 
     @GetMapping
-    public List<HabitDto> findAll() {
-        return habitService.findAll();
+    public ResponseEntity<List<HabitDto>> findAll() {
+        return ResponseEntity.ok(habitService.findAll());
     }
 
     // Metodo http post simplificado que eu criei só pra facilitar a inserção de

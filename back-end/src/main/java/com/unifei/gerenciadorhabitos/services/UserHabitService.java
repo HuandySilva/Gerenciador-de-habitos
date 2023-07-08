@@ -30,7 +30,6 @@ public class UserHabitService {
         HabitModel habit = habitService.findByDescription(model.getDescription())
                 .orElseThrow(() -> new HabitNotFoundException(model.getDescription()));
         UserModel userModel = userService.findByUsername(principal.getName());
-        System.out.println(userModel.getUsername());
         UserHabitModel uhm = new UserHabitModel(habit, userModel, habit_date);
         userHabitRepository.save(uhm);
     }
