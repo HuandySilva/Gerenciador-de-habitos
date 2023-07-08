@@ -14,7 +14,5 @@ public interface UserHabitMapper {
 
     UserHabitDto toDto(UserHabitModel userHabit);
 
-    UserHabitModel dtoToModel(UserHabitDto dto);
-
     List<UserHabitDto> modelsToDtos(List<UserHabitModel> userHabits);
 }

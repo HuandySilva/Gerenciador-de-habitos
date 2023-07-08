@@ -1,5 +1,6 @@
 package com.unifei.gerenciadorhabitos.util;
 
+import com.unifei.gerenciadorhabitos.dtos.UserGetDto;
 import com.unifei.gerenciadorhabitos.dtos.UserPostDto;
 import com.unifei.gerenciadorhabitos.models.UserModel;
 
@@ -19,4 +20,6 @@ public interface UserMapper {
     UserPostDto modelToDto(UserModel user);
 
     List<UserPostDto> modelsToDtos(List<UserModel> models);
+
+    UserGetDto modelToGet(UserModel model);
 }

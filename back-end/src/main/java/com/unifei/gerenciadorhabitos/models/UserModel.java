@@ -9,9 +9,6 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.Setter;
 
 @Document(collection = "users")
@@ -21,14 +18,9 @@ public class UserModel implements UserDetails {
     @Id
     @Field("id")
     private String id;
-    @NotNull
-    @NotBlank
-    @Email
     @Field("username")
     @Indexed(unique = true)
     private String username;
-    @NotNull
-    @NotBlank
     @Field("password")
     private String password;
 
