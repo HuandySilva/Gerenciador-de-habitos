@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap&family=Cookie&display=swap');
-
 .Container-Main{
     height: 100%;
     display: flex;
@@ -14,8 +12,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: rgb(0,4,54);
-    background: linear-gradient(90deg, rgba(0,4,54,1) 0%, rgba(0,8,121,1) 30%, rgba(0,207,255,1) 100%);
+    background: rgb(5, 0, 46);
+    background: linear-gradient(90deg, rgb(5, 0, 46) 0%, rgb(5, 0, 46) 30%, rgba(7, 40, 176, 0.512) 100%);
 }
 
 .Conteiner-Sobre{
@@ -25,9 +23,9 @@
 }
 
 .h1-SaibaMais{
-    font-family: 'Roboto', sans-serif;
     font-size: 2.5rem;
-    color: rgba(0,207,255,1);
+    color: rgb(124, 149, 249);
+    /* color: rgba(0,207,255,1); */
     margin-bottom: 1rem;
     text-align: left;
 }
@@ -45,7 +43,6 @@
 
 .Descricao-Habits{
     text-align: left;
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: white;
 }
@@ -58,49 +55,56 @@
 }
 
 .Porque-Usar, .Ferramentas{
-    width: 30%;
-    margin: 3rem 2rem;
-}
-
-.Porque-Usar{
+    width: 40%;
+    margin: 3rem 0 3rem 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-right: 3rem;
-    border-right: .1rem solid rgba(0,8,121,1); 
 }
 
-.Porque-Usar-h2, .Ferramentas-h2{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    color: rgba(0,8,121,1);
-    margin-bottom: 1rem;
+.Porque-Usar{
+    padding-right: 3rem;
+    border-right: .1rem solid rgb(5, 0, 46);
 }
 
 .Porque-Usar-p{
     text-align: center;
 }
 
-.Porque-Usar-p, .Ferramentas-il{
-    font-family: 'Roboto', sans-serif;
+.Porque-Usar-h2, .Ferramentas-h2{
+    font-weight: 700;
+    color: rgb(5, 0, 46);
+    margin-bottom: 1rem;
+}
+
+.Ferramentas-listas{
+    display: flex;
+}
+
+.Ferramentas-listas>div{
+    margin: 0 2rem 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.Ferramentas-listas>div>ul{
+    margin: 0 0 0 1rem;
 }
 
 .Link-Unifei, .Link-Imc{
     text-decoration: none;
-    color: rgba(0,8,121,1);
+    color: rgb(56, 40, 179);
 }
 
 
 .h2-Devs{
-    font-family: 'Roboto', sans-serif;
     font-size: 2.5rem;
-    color: rgba(0,8,121,1);
+    color: rgb(5, 0, 46);
     text-align: center;
 }
 
 .Descricao-Geral{
     text-align: justify;
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     margin: 1.5rem 2rem;
 }
@@ -124,19 +128,29 @@
     flex-direction: column;
     align-items: center;
     width: 16rem;
-    background-color: rgba(0,8,121,1);
+    background: rgb(5, 0, 46);
+    background: linear-gradient(45deg, rgb(5, 0, 46, 0.9) 27%, rgba(7, 40, 176, 0.512) 100%);
     border-radius: .8rem;
     border: none;
-    box-shadow: 0 0 20px rgba(0, 8, 121, 0.467);
+    box-shadow: 0 0 20px rgb(5, 0, 46, 0.6);
 }
 
 .Devs-Nome{
     text-align: center;
-    font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: white;
     margin: .5rem 0;
+}
+
+.Devs-funcao{
+    display: flex;
+    align-items: center;
+    color: rgba(252, 252, 252, 0.57);
+    text-align: center;
+    font-size: .9rem;
+    margin: 0 1rem 1rem;
+    height: 6rem;
 }
 
 .Devs-Foto{
@@ -146,17 +160,19 @@
 }
 
 .Devs-graduacao{
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     margin-bottom: .7rem;
     text-align: center;
     color: white;
 }
 
+.Devs-redes{
+    display: flex;
+}
+
 .Devs-GitHub, .Devs-Linkedin{
-    font-family: 'Roboto', sans-serif;
+    margin: 0 .5rem .8rem;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 500;
     color: white;
-    margin: 0 0 .7rem;
 }

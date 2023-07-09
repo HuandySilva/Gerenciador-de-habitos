@@ -69,7 +69,7 @@ const Clima = () =>{
             </div>
           </div>
         ):(
-          <p>Obtendo dados do clima...</p>
+          <p className='Clima-buscando'>Obtendo dados do clima...</p>
         )}
       </div>
     )

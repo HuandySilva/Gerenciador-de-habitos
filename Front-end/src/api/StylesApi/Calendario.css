@@ -1,0 +1,32 @@
+.Calendario-Container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Calendario{
+    margin-top: 2rem;
+    background-color: rgba(25, 0, 255, 0.119);
+    border-radius: 1rem;
+    border: 1px solid white;
+    width: 60%;    
+}
+
+.react-calendar__navigation__label__labelText, .react-calendar__navigation__arrow{
+    color: white;
+}
+
+/* Cabeçalho do calendario */
+.react-calendar__navigation{
+    background: rgb(5, 0, 46);
+    background: linear-gradient(45deg, rgb(5, 0, 46, 0.7) 30%, rgba(7, 40, 176, 0.512) 100%);
+    border-radius: 1rem 1rem 0 0;
+    border: none;
+}
+
+/* Dias da semana */
+.react-calendar__month-view__weekdays{
+    color: white;
+}
+

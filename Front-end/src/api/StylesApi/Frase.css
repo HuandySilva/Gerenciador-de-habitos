@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Infant:ital,wght@1,300;1,500&display=swap');
+
+.Frase-Container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Frase{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+    background-color: rgba(25, 0, 255, 0.119);
+    border-radius: 1rem;
+    border: 1px solid white;
+    width: 60%;
+}
+
+.Frase-p{
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0 2rem 2rem;
+}
+
+.Frase-button{
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+    border-radius: .5rem;
+    width: 6.2rem;
+    height: 1.9rem;
+    border: none;
+    background: rgb(5, 0, 46);
+    background: linear-gradient(45deg, rgb(5, 0, 46, 0.7) 30%, rgba(7, 40, 176, 0.512) 100%);
+}
+
+.Frase-button:hover{
+    font-size: 1.05rem;
+    font-weight: 600;
+}

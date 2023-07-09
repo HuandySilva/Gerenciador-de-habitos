@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 
 .LandingPage{
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: left;
-    background: rgb(0, 4, 54);
-    background: linear-gradient(90deg,rgba(0,4,54,1)  0%, rgba(0,8,121,1) 50%, rgba(0,207,255,1) 100%);
+    background: rgb(5, 0, 46);
+    background: linear-gradient(90deg, rgb(5, 0, 46) 0%, rgba(18, 5, 118, 0.85) 50%, rgba(7, 40, 176, 0.9) 100%);
 }
 
 .LandingPage-Conteudo{
@@ -24,7 +24,6 @@
 }
 
 .LandingPage-link-saibamais {
-    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 1.1rem;
     color: white;
@@ -32,16 +31,23 @@
     margin: 0 2rem 0 0;
 }
 
+.LandingPage-link-saibamais:hover{
+    color: rgba(255, 255, 255, 0.614);
+}
+
 .LandingPage-link-login{
     border-radius: 5rem;
     border: 1px solid white;
     background-color: rgba(255, 0, 166, 0.788);
     padding: .5rem 2rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
     font-size: 1.1rem;
+    font-weight: 900;
     color: white;
     text-decoration: none;
+}
+
+.LandingPage-link-login:hover{
+    background-color: rgba(255, 0, 221, 0.701);
 }
 
 .LandingPage-Main{
@@ -63,14 +69,13 @@
 .LandingPage-h1{
     color: rgb(255, 255, 255);
     font-size: 4rem;
-    font-family: 'Roboto', sans-serif;
+    text-align: center;
     font-weight: 900;
     text-shadow: 2px 2px 8px rgb(219, 10, 146);
 }
 
 .LandingPage-p{
     margin: 1rem 0;
-    font-family: 'Roboto', sans-serif;
     color: white;
     font-weight: 400;
 }
@@ -80,28 +85,26 @@
     border: 1px solid white;
     background-color: rgba(255, 255, 255, 0.266);
     padding: 1rem 2.8rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+    font-weight: 900;
     font-size: 1.5rem;
     color: white;
     text-decoration: none;
     margin: 0 auto;
 }
 
-.LandingPage-img{
-    width: 20rem;
-    margin: 0 0  0 5rem;
-}
-
-.LandingPage-link-saibamais:hover{
-    color: rgba(255, 255, 255, 0.614);
-}
-
-.LandingPage-link-login:hover{
-    background-color: rgba(255, 0, 221, 0.701);
-}
-
 .LandingPage-link-cadastro:hover{
     background-color: rgba(191, 170, 254, 0.625);
 }
 
+.LandingPage-figure{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    font-family: 'Cookie', cursive;
+}
+
+.LandingPage-img{
+    width: 20rem;
+    margin: 0 0 3rem 5rem;
+}

@@ -1,5 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Styles/Home.css'
+
+import Calendario from '../api/Calendario'
+import Frase from '../api/Frase'
+
 
 export default function Home(){
 
@@ -20,11 +24,51 @@ export default function Home(){
         }))
     }
 
+    const [dataAtual, setDataAtual] = useState(new Date());
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+          setDataAtual(new Date());
+        }, 86400000);
+        return () => clearInterval(timer);
+    }, []);
+
+    const formatarData = (data) => {
+        const dia = data.getDate();
+        const mes = data.getMonth() + 1; // Os meses são indexados a partir de zero
+        const ano = data.getFullYear();
+    
+        return `${dia}/${mes}/${ano}`;
+    };
+
+
+    const [hour, setHour] = useState('');
+    const [minute, setMinute] = useState('');
+
+    useEffect(() => {
+        const updateTime = () => {
+            const date = new Date();
+            const formattedHour = date.getHours();
+            const formattedMinute = date.getMinutes();
+            setHour(formattedHour);
+            setMinute(formattedMinute);
+        };
+
+        updateTime(); // Atualiza a hora imediatamente
+
+        // Atualiza a hora a cada minuto
+        const intervalId = setInterval(updateTime, 60000);
+
+        // Limpa o intervalo quando o componente é desmontado
+        return () => clearInterval(intervalId);
+    }, []);
+
+
     return(
         <div className='Home-Container'>
             <section className='Home-section-habits'>
                 <div className='Home-section-checklist'>
-                    <h2 className='Home-checklist-h2'>To do</h2>
+                    <h2 className='Home-checklist-h2'>Hábitos do dia {formatarData(dataAtual)}</h2>
                     <label className='Home-checklist-label'>
                         <p className='Home-checklist-emoji'>&#x1F6CC;</p>
                         Dormir de 6 a 8 horas
@@ -57,12 +101,21 @@ export default function Home(){
 
                 </div>
                 <div className='Home-section-tabela'>
-                    Dashbord
+                    Minha evolução
                 </div>
             </section>
             <section className='Home-section-apis'>
-                <div className='Home-section-filme'>Filme</div>
-                <div className='Home-section-frase'>Frase</div>
+                <div className='Home-horario'>
+                    <p>{hour}</p> 
+                    <p>{minute.toString().padStart(2, '0')}</p>
+                </div>
+                <div className='Home-section-calendario'>
+                    <Calendario/>
+                </div>
+                <div className='Home-section-frase'>
+                    <Frase/>
+                </div>
+                
             </section>
             
         </div>
