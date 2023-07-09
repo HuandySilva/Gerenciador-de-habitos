@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.unifei.gerenciadorhabitos.Exceptions.HabitNotFoundException;
-import com.unifei.gerenciadorhabitos.dtos.HabitDto;
 import com.unifei.gerenciadorhabitos.dtos.UserHabitDto;
+import com.unifei.gerenciadorhabitos.dtos.UserHabitPostDto;
 import com.unifei.gerenciadorhabitos.services.UserHabitService;
-import com.unifei.gerenciadorhabitos.util.HabitMapper;
 import com.unifei.gerenciadorhabitos.util.UserHabitMapper;
 
 import jakarta.validation.Valid;
@@ -34,11 +34,22 @@ public class UserHabitController {
         return ResponseEntity.ok(UserHabitMapper.INSTANCE.modelsToDtos(userHabitService.findAll()));
     }
 
+    /**
+     * @param dto
+     * @param principal
+     * @throws HabitNotFoundException
+     */
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void saveUserHabit(@RequestBody @Valid HabitDto dto, Principal principal)
+    public void saveUserHabit(@RequestBody @Valid UserHabitPostDto dto, Principal principal)
             throws HabitNotFoundException {
-        userHabitService.saveUserHabit(HabitMapper.INSTANCE.dtoToModel(dto), principal);
+        userHabitService.saveUserHabit(dto.getHabitDescription(), principal);
     }
 
+    @GetMapping("/description")
+    public ResponseEntity<UserHabitDto> findOne(@RequestParam("description") String habitDescription,
+            Principal principal) throws Exception {
+        return ResponseEntity.ok(UserHabitMapper.INSTANCE.toDto(
+                userHabitService.findByUserModelUsernameAndDateAndHabitModelDescription(habitDescription, principal)));
+    }
 }
