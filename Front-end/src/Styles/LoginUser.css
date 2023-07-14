@@ -59,17 +59,19 @@
 .LoginUser-Button-Login{
     margin: .5rem 0 1.3rem;
     width: 72%;
-    height: 2.5rem;
+    /* height: 2.5rem; */
     color: beige;
     font-size: 1.2rem;
     font-weight: 400;
     background-color: rgba(7, 40, 176);
+    text-align: center;
+    padding: .6rem 0;
     border-radius: 1rem;
     border: none;
 }
 
 .LoginUser-Button-Login:hover{
-    font-size: 1.3rem;
+    /* font-size: 1.3rem; */
     background-color: rgba(7, 40, 176, 0.8);
 }
 
