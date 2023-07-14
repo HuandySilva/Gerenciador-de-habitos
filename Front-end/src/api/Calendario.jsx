@@ -3,7 +3,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './StylesApi/Calendario.css';
 
-function Filme() {
+function Calendario() {
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   const handleDateChange = (date) => {
@@ -17,4 +17,4 @@ function Filme() {
   );
 }
 
-export default Filme;
+export default Calendario;
