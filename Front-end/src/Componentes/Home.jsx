@@ -4,8 +4,56 @@ import '../Styles/Home.css'
 import Calendario from '../api/Calendario'
 import Frase from '../api/Frase'
 
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend,
+} from 'chart.js';
+
+import { Bar } from 'react-chartjs-2';
+
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend
+);
+
 
 export default function Home(){
+
+    const options = {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: false,
+                text: 'Dataset',
+            },
+        },
+    };
+    
+    const labels = ['1', '2', '3', '4', '5', '6', '7'];
+    const data = {
+        labels,
+        datasets: [
+            {
+                label: ['Hábitos de Julho'],
+                data: labels.map((() => Math.floor(Math.random() * 100))),
+                backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                borderColor: 'red',
+                borderWidth: 1
+            },
+        ],
+    };
 
     const [checklist, setCheklist] = useState({
         dormir: false,
@@ -102,6 +150,7 @@ export default function Home(){
                 </div>
                 <div className='Home-section-tabela'>
                     Minha evolução
+                    <Bar options={options} data={data} />
                 </div>
             </section>
             <section className='Home-section-apis'>
